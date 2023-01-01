@@ -15,4 +15,4 @@
       ignore_errors: yes
       
     - name: create container using sreeramakumar/project2:latest
-      command: docker run -d --name project2 -p 3000:3000 sreeramakumar/project2:latest
+      command: docker run -d --name project2 -p 8090:80 sreeramakumar/project2:latest
