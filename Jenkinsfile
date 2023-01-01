@@ -9,7 +9,7 @@ pipeline {
         }
         stage('creating image  php file') {
             steps {
-                sshPublisher(publishers: [sshPublisherDesc(configName: 'jenkinsserver', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'sudo ansible-playbook dockerimagebuild.yaml', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/root', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'Dockerfile,deployapplication2.yaml,dockerimagebuild.yaml')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+                sshPublisher(publishers: [sshPublisherDesc(configName: 'jenkinsserver', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'sudo ansible-playbook dockerimagebuild.yaml', execTimeout: 220000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/root', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'Dockerfile,deployapplication2.yaml,dockerimagebuild.yaml')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
             }
         }
     }
